@@ -1,11 +1,8 @@
 import "./App.css";
+import Layout from "./Components/Layout/Layout";
 
 function App() {
-  return (
-    <>
-      <p className="text-xl font-medium text-gray-900">para</p>
-    </>
-  );
+  return <Layout />;
 }
 
 export default App;
