@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Country({ key, country, darkTheme }) {
   const {
     name,
@@ -14,11 +16,13 @@ export default function Country({ key, country, darkTheme }) {
       } w-full h-80  rounded-md shadow-lg`}
     >
       <div className="h-40 ">
-        <img
-          className="rounded-t-md w-full h-full object-cover"
-          src={svg}
-          alt={`${name} flag image`}
-        />
+        <Link to={`/country/${name}`} rel="noreferrer">
+          <img
+            className="rounded-t-md w-full h-full object-cover cursor-pointer"
+            src={svg}
+            alt={`${name} flag image`}
+          />
+        </Link>
       </div>
       <div className="pt-3 pl-5">
         <h3 className="font-bold text-lg pb-2">{name}</h3>
