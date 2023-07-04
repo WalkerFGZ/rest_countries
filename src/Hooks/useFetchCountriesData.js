@@ -14,9 +14,10 @@ function useFetchCountriesData(url) {
 
     useEffect(() => {
         async function getData() {
+
             try {
                 setLoadingStatus(LOADING_STATES[0]);
-                const response = await axios.get('https://api.github.com/repos/WalkerFGZ/rest_countries/git/blobs/1a74c81e637557f1de96b67912be777b4d28a31c');
+                const response = await axios.get(url);
                 const countryData = JSON.parse(atob(response.data.content))
                 setData(countryData);
                 setLoadingStatus(LOADING_STATES[1]);
